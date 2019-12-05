@@ -77,10 +77,10 @@ contract EventTicketsV2 {
     returns(uint eventID)
     {
 	    events[eventCount].description = description;
-      events[eventCount].website = website;
-      events[eventCount].totalTickets = tickets;
+            events[eventCount].website = website;
+            events[eventCount].totalTickets = tickets;
 	    events[eventCount].isOpen = true;
-      eventID = eventCount;
+            eventID = eventCount;
 	    eventCount += 1;
 	    emit LogEventAdded(description, website, tickets, eventID);
 	    return(eventCount);
