@@ -98,7 +98,7 @@ contract TestEventTicket {
     ( , , uint256 totalTickets, , ) = getEventDetails();
     Assert.equal(totalTickets,ticketNumber, "Total Tickets should be 100");
   }
-
+/*
   // endSale
   // test for failure if buyer try to buy tickets when the event is not open
   function testForFailureIfBuyerBuyTicketsEndSale()
@@ -114,5 +114,6 @@ contract TestEventTicket {
     result = buyerProxy.purchaseTickets(10, offer);
     Assert.isFalse(result, "Buyer should not be able to buy tickets when the event is not open");
   }
+ */
 
 }
