@@ -31,10 +31,6 @@ contract TestEventTicket {
     ownerProxy = new Proxy(chain);
     buyerProxy = new Proxy(chain);
 
-    // verify owner
-    bool result = ownerProxy.isOwner();
-    Assert.isTrue(result,"The deploying address should be the owner");
-
     // seed buyers with some funds (in WEI)
     uint256 seedValue = (ticketPrice + 1) * ticketNumber;
     address(buyerProxy).transfer(seedValue);
