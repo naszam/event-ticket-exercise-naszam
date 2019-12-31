@@ -60,7 +60,7 @@ contract TestEventTicket {
       Assert.isTrue(result, "Paid the correct price");
 
       ( , , , uint256 sales, ) = getEventDetails();
-      Assert.equal(sales, 1, "The ticket sales should be 1");
+      Assert.equal(sales, 10, "The ticket sales should be 10");
   }
 
   // buyTickets
