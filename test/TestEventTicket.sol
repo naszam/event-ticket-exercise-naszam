@@ -31,6 +31,10 @@ contract TestEventTicket {
     ownerProxy = new Proxy(chain);
     buyerProxy = new Proxy(chain);
 
+    // verify owner
+    bool result = ownerProxy.isOwner();
+    Assert.isTrue(result,"The deploying address should be the owner");
+
     // seed buyers with some funds (in WEI)
     uint256 seedValue = (ticketPrice + 1) * ticketNumber;
     address(buyerProxy).transfer(seedValue);
@@ -60,7 +64,7 @@ contract TestEventTicket {
       Assert.isTrue(result, "Paid the correct price");
 
       ( , , , uint256 sales, ) = getEventDetails();
-      Assert.equal(sales, 1, "The ticket sales should be 1");
+      Assert.equal(sales, 10, "The ticket sales should be 10");
   }
 
   // buyTickets
