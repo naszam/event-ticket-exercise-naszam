@@ -27,6 +27,14 @@ contract Proxy {
 		{
 			return eventTickets;
 		}
+		/// @notice verify owner
+		function isOwner()
+			public
+			returns (bool)
+		{
+			(bool success, ) = address(eventTickets).call(abi.encodeWithSignature("isOwner()"));
+			return success;
+		}
 
 		/// @notice buy tickets
 		/// @param tickets number of tickets to buy
