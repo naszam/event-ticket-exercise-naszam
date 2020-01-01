@@ -98,22 +98,21 @@ contract TestEventTicket {
     ( , , uint256 totalTickets, , ) = getEventDetails();
     Assert.equal(totalTickets,ticketNumber, "Total Tickets should be 100");
   }
-/*
+
   // endSale
   // test for failure if buyer try to buy tickets when the event is not open
   function testForFailureIfBuyerBuyTicketsEndSale()
     public
   {
-    bool result = ownerProxy.endSale();
-    Assert.isTrue(result, "Only owner should be able to end the tickets sale");
+    chain.endSale();
 
     ( , , , , bool isOpen) = getEventDetails();
     Assert.notEqual(isOpen, true, "The event sale should be close");
 
     uint256 offer = ticketPrice*10;
-    result = buyerProxy.purchaseTickets(10, offer);
+    bool result = buyerProxy.purchaseTickets(10, offer);
     Assert.isFalse(result, "Buyer should not be able to buy tickets when the event is not open");
   }
- */
+
 
 }
