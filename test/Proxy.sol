@@ -50,12 +50,4 @@ contract Proxy {
 			return success;
 		}
 
-		/// @notice close the ticket sale
-		function endSale()
-			public
-			returns (bool)
-		{
-			(bool success, ) = address(eventTickets).call(abi.encodeWithSignature("endSale()"));
-			return success;
-		}
 }
