@@ -13,7 +13,6 @@ contract TestEventTicket {
 
   EventTickets public chain;
   EventTicketsV2 public chain2;
-  Proxy public ownerProxy;
   Proxy public buyerProxy;
 
   string description = "description";
@@ -28,7 +27,6 @@ contract TestEventTicket {
 
     // contract to test
     chain = new EventTickets(description, url, ticketNumber);
-    ownerProxy = new Proxy(chain);
     buyerProxy = new Proxy(chain);
 
     // seed buyers with some funds (in WEI)
