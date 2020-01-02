@@ -11,7 +11,6 @@ contract TestEventTicket {
   uint public initialBalance = 1 ether;
 
   EventTickets public chain;
-  EventTicketsV2 public chain2;
   Proxy public buyerProxy;
 
   string description = "description";
