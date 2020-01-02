@@ -3,7 +3,6 @@ pragma solidity ^0.5.0;
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/EventTickets.sol";
-import "../contracts/EventTicketsV2.sol";
 import "./Proxy.sol";
 
 contract TestEventTicket {
@@ -12,7 +11,6 @@ contract TestEventTicket {
   uint public initialBalance = 1 ether;
 
   EventTickets public chain;
-  EventTicketsV2 public chain2;
   Proxy public buyerProxy;
 
   string description = "description";
